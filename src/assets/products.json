@@ -1,0 +1,76 @@
+[
+    {
+        "id" : "1",
+        "name" : "Stone-Ring",
+        "price" : "1000/-",
+        "img":"./pics/diamond.jpg"
+        
+    },
+    {
+        "id":"2",
+        "name" : "Bracelete",
+        "price" : "5000/-",
+        "img":"./pics/dragon.jpg"
+        
+    },{
+        "id":"3",
+        "name" : "Gold-Ring",
+        "price" : "50000/-",
+        "img":"./pics/gold.jpg"
+        
+    },{
+        "id":"4",
+        "name" : "Ring",
+        "price" : "3000/-",
+        "img":"./pics/ring.jpg"
+        
+    },{
+        "id":"5",
+        "name" : "Full-Sleeve T-shirt",
+        "price" : "1500/-",
+        "img":"./pics/full-hand.jpg"
+        
+    },{
+        "id":"6",
+        "name" : "Hoody",
+        "price" : "800/-",
+        "img":"./pics/hoody.jpg"
+        
+    },{
+        "id":"7",
+        "name" : "Womens-Top",
+        "price" : "350/-",
+        "img":"./pics/red dress.jpg"
+        
+    },{
+        "id":"8",
+        "name" : "T-shirt",
+        "price" : "600/-",
+        "img":"./pics/t-shirt.jpg"
+        
+    },{
+        "id":"9",
+        "name" : "Drive-card",
+        "price" : "3000/-",
+        "img":"./pics/drive-card.jpg"
+        
+    },{
+        "id":"10",
+        "name" : "Power-card",
+        "price" : "2800/-",
+        "img":"./pics/power.jpg"
+        
+    },{
+        "id":"11",
+        "name" : "Samsung-tv",
+        "price" : "12000/-",
+        "img":"./pics/tv.jpg"
+        
+    },{
+        "id":"12",
+        "name" : "Sony-TV",
+        "price" : "18000/-",
+        "img":"./pics/side-tv.jpg"
+        
+    }
+]
