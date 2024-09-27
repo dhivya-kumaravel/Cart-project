@@ -1,11 +1,18 @@
+import { useEffect, useState } from "react"
+
 /* eslint-disable react/prop-types */
 
 
-import { useEffect, useState } from "react"
 
 
-const Cart = ({cart}) => {
-    const [count, setCount]=useState(1)
+const Cart = ({cart, setCart}) => {
+    
+    const removeCart = () => {
+        setCart(cart => cart.filter(product => product.id !== product.id));
+        
+       }
+    
+        const [count, setCount]=useState(1)
 
     const [total, setTotal]=useState(0)
     useEffect(()=>{
@@ -13,7 +20,7 @@ const Cart = ({cart}) => {
     },[cart])
   return ( <>
   <h2 className="p-3 font-bold text-purple-800 text-xl">Cart Items :</h2>
-    <div className="cart-container flex flex-col gap-4">
+    <div className="cart-container flex flex-col gap-4 items-center justify-center ml-8">
 
         {cart.map((product) =>(
             <div className="flex gap-4 items-center p-4 border shadow-lg" key={product.id}>
@@ -23,7 +30,7 @@ const Cart = ({cart}) => {
             <div className="flex gap-4">
                 <h2 className="pr-4 font-bold">{product.name} </h2>
                 <p>Price Rs: {product.price}</p>
-                <div className="flex ml-12 gap-4 items-center justify-center border">
+                <div className="flex ml-12 gap-4 items-center justify-center">
                 <button className="border w-4 h-6 flex items-center justify-center bg-pink-300" onClick = {()=>
     { setCount(count +1);
         console.log(count)}}>+</button>
@@ -31,6 +38,7 @@ const Cart = ({cart}) => {
                 <button className="border w-4 h-6 flex items-center justify-center bg-pink-300" onClick = {()=>
     { setCount(count -1);
         console.log(count)}}>-</button></div>
+        <button className='border bg-red-600 p-1 rounded text-white hover:bg-blue-900 hover:text-yellow-400 shadow-md ml-16 h-8 flex items-center justify-center mt-2' onClick={removeCart}>Remove</button>
             </div>
         </div>
         ) )}
@@ -39,5 +47,4 @@ const Cart = ({cart}) => {
      </>
   )
 }
-
 export default Cart
