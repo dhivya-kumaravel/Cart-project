@@ -12,7 +12,7 @@ const Cart = ({cart, setCart}) => {
         
        }
     
-        const [count, setCount]=useState(1)
+        const count = 1
 
     const [total, setTotal]=useState(0)
     useEffect(()=>{
@@ -30,14 +30,11 @@ const Cart = ({cart, setCart}) => {
             <div className="flex gap-4">
                 <h2 className="pr-4 font-bold">{product.name} </h2>
                 <p>Price Rs: {product.price}</p>
-                <div className="flex ml-12 gap-4 items-center justify-center">
-                <button className="border w-4 h-6 flex items-center justify-center bg-pink-300" onClick = {()=>
-    { setCount(count +1);
-        console.log(count)}}>+</button>
-                <p>{count}</p>
-                <button className="border w-4 h-6 flex items-center justify-center bg-pink-300" onClick = {()=>
-    { setCount(count -1);
-        console.log(count)}}>-</button></div>
+                <div className="flex ml-12 gap-8 items-center justify-center">
+                <button className=" flex items-center justify-center border border-cyan-500 rounded" onClick = {()=>
+    { alert("Cant increase the quantity in cart")}}>Qnty +:</button>
+                <p className="bg-pink-200">{count} (Cant increase quantity)</p>
+                </div>
         <button className='border bg-red-600 p-1 rounded text-white hover:bg-blue-900 hover:text-yellow-400 shadow-md ml-16 h-8 flex items-center justify-center mt-2' onClick={removeCart}>Remove</button>
             </div>
         </div>
