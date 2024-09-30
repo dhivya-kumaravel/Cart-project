@@ -32,8 +32,9 @@ const Cart = ({cart, setCart}) => {
                 <p>Price Rs: {product.price}</p>
                 <div className="flex ml-12 gap-8 items-center justify-center">
                 <button className=" flex items-center justify-center border border-cyan-500 rounded" onClick = {()=>
-    { alert("Cant increase the quantity in cart")}}>Qnty +:</button>
-                <p className="bg-pink-200">{count} (Cant increase quantity)</p>
+    { alert("Cant increase the quantity in cart")}}>Qnty</button>
+    <p>:</p>
+                <p className="bg-pink-200">{count}</p>
                 </div>
         <button className='border bg-red-600 p-1 rounded text-white hover:bg-blue-900 hover:text-yellow-400 shadow-md ml-16 h-8 flex items-center justify-center mt-2' onClick={removeCart}>Remove</button>
             </div>
