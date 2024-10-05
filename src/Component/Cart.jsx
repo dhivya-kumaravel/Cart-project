@@ -41,7 +41,7 @@ const Cart = ({cart, setCart}) => {
         </div>
         ) )}
         </div>
-    <h1 className="p-4 text-cyan-400 font-bold text-xl flex items-center justify-center">Total Price : Rs. {total}/-</h1>
+    <h1 className="p-4 text-cyan-400 font-bold text-xl flex items-center justify-center">Total Price : Rs. {total}/- (Discount 5%)</h1>
      </>
   )
 }
