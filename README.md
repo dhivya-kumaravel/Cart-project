@@ -1,6 +1,6 @@
 This repository contains a small shopping page using ReactJs, React Router, HTML/CSS and Tailwind CSS for styling JavaScript for functionality.
 Here, user can add the products into the cart and can remove the products from the cart.
 The count of the products in the cart shows in the top corner.
-The user can increase the quantity of each product.
-In the cart, the total amount will be displayed.
+The user can add the products only one time by clicking the add to cart button. If user clicks the add to cart button again, it will show you alert message "Already in the cart".
+In the cart, the total amount will be displayed with 5% discount.
 "# Cart-project" 
