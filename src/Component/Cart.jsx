@@ -7,8 +7,8 @@ import { useEffect, useState } from "react"
 
 const Cart = ({cart, setCart}) => {
     
-    const removeCart = () => {
-        setCart(cart => cart.filter(product => product.id !== product.id));
+    const removeCart = (productId) => {
+        setCart(cart => cart.filter(product => product.id !== productId));
         
        }
     
@@ -16,7 +16,7 @@ const Cart = ({cart, setCart}) => {
 
     const [total, setTotal]=useState(0)
     useEffect(()=>{
-        setTotal(cart.reduce((acc, curr)=> acc + parseInt(curr.price),0))
+        setTotal(cart.reduce((acc, curr) => acc + parseInt(curr.price),0))
     },[cart])
   return ( <>
   <h2 className="p-3 font-bold text-purple-800 text-xl">Cart Items :</h2>
@@ -36,7 +36,7 @@ const Cart = ({cart, setCart}) => {
     <p>:</p>
                 <p className="bg-pink-200">{count}</p>
                 </div>
-        <button className='border bg-red-600 p-1 rounded text-white hover:bg-blue-900 hover:text-yellow-400 shadow-md ml-16 h-8 flex items-center justify-center mt-2' onClick={removeCart}>Remove</button>
+        <button className='border bg-red-600 p-1 rounded text-white hover:bg-blue-900 hover:text-yellow-400 shadow-md ml-16 h-8 flex items-center justify-center mt-2' onClick={() => removeCart(product.id)}>Remove</button>
             </div>
         </div>
         ) )}
