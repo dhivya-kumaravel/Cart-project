@@ -5,13 +5,14 @@ import { useState } from "react";
 const Product = ({product, cart, setCart}) => {
   const [isAdded, setIsAdded] = useState (false);
   const handleClick = () => {
-    if (isAdded) {
+    if(isAdded) {alert('Already added to cart!');
       
-        alert('Already added to cart!');
-    } else {
-        setIsAdded(true);
-        setCart([...cart, product])
-        alert('Product added to cart!');
+      
+        
+    } else  {   
+      setIsAdded(true);   
+      setCart([...cart, product])  
+        
     }
 };
   //const addCart = () => {
